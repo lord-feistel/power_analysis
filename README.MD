@@ -3,22 +3,25 @@
 
 
 ## Index
+## Index
 
 - [Introduction](#introduction)
-- [Power Analysis Attack](#power-analysis-attack)
-- [RSA Short Introduction](#rsa-short-introduction)
-  - [RSA Example](#rsa-example)
-  - [Equipment](#equipment)
-  - [Measuring Power: A Short Introduction](#measuring-power-a-short-introduction)
-    - [Ohm's Law](#ohms-law)
-    - [Kirchhoff's Law and Voltage Divider](#kirchhoffs-law-and-voltage-divider)
-    - [Shunt](#shunt)
-    - [Example Power Measure](#example-power-measure)
+- [Power Analysis Attacks](#power-analysis-attacks)
+- [RSA: A Short Introduction](#rsa-a-short-introduction)
+- [RSA Example](#rsa-example)
+- [Equipment](#equipment)
+- [Measuring Power: A Short Introduction](#measuring-power-a-short-introduction)
+  - [Ohm's Law](#ohms-law)
+  - [Kirchhoff's Voltage Law (KVL)](#kirchhoffs-voltage-law-kvl)
+  - [Voltage Divider](#voltage-divider)
+  - [Shunt Resistor](#shunt-resistor)
+- [Example Power Measurement](#example-power-measurement)
 - [Fast Exponentiation](#fast-exponentiation)
-  - [Fast Exponentiation in Arduino (Atmega328P)](#fast-exponentiation-in-arduino-atmega328p)
-  - [Results](#results)
+- [Fast Exponentiation in Arduino (Atmega328P)](#fast-exponentiation-in-arduino-atmega328p)
+- [Results](#results)
 - [Conclusion](#conclusion)
 - [References](#references)
+
 
 
 ### Introduction
@@ -31,7 +34,7 @@ Several of them can be found over the internet, some by the way are in well-know
 
 I decide to do this small PoC ( Proof of concept )to show why is important not invented your own cryptography algorithm, but also use a robust implementation of such a algorithms.
 
-This PoC  performe an side channel attack ( power analysis attack ) against a bad implementation an auxiliary routine used in the RSA implementation ( fast exponentiation).
+This PoC  performs an side channel attack ( power analysis attack ) against a bad implementation of an auxiliary routine used in the RSA implementation ( fast exponentiation).
 
 A side-channel attack is a method of compromising a cryptographic system by exploiting indirect information leakage rather than directly attacking the cryptographic algorithm or protocol itself.
 
@@ -41,7 +44,7 @@ Such attacks can be highly effective in compromising cryptographic systems like 
 
 This paper will perform a power analysis attack on a well-known vulnerability in an implementation of the RSA algorithm in a firmware for  Arduino ( Atmega328P).
 
-> Note I did it on the rush, please forgive me for the spell errors that eventually you will find.
+> Note I did it on the rush, please forgive me for the spells / grammar errors that eventually you will find.
 
 ### Power Analysis Attacks
 
@@ -100,7 +103,7 @@ A generic power supply was used either ( presented in **Figure 3**).
 
 ![osciloscope](https://github.com/lord-feistel/power_analysis/blob/main/images/osciloscope.jpg)
 
-**Figure 2** - Oscilloscope use in the experiment.  
+**Figure 2** - Oscilloscope used in the experiment.  
 
 
 ![power_supply](https://github.com/lord-feistel/power_analysis/blob/main/images/power_supply.jpg)
@@ -152,7 +155,7 @@ resistors `R1` and `R2`.
 
 **Figure 7** - Kirchhoff law example. 
 
-### Voltage divisor
+### Voltage divider
 
 The voltage divider is a consequence of Kirchhoff's Voltage Law (KVL) and states a way to calculates the **Vout** that is the voltage between
 the resistor `R1`and `R2`. 
