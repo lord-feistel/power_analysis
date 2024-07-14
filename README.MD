@@ -23,6 +23,16 @@
 
 ### Introduction
 
+Recently,  I observed people implementing cryptography for Arduino by themselves like state in this topic in stackoverflow:
+
+https://stackoverflow.com/questions/39189065/rsa-encryption-decryption-functions-for-arduino
+
+Several of them can be found over the internet, some by the way are in well-knowm libraries.
+
+I decide to do this small PoC ( Proof of concept )to show why is important not invented your own cryptography algorithm, but also use a robust implementation of such a algorithms.
+
+This PoC  performe an side channel attack ( power analysis attack ) against a bad implementation an auxiliary routine used in the RSA implementation ( fast exponentiation).
+
 A side-channel attack is a method of compromising a cryptographic system by exploiting indirect information leakage rather than directly attacking the cryptographic algorithm or protocol itself.
 
 This type of leakage can originate from various sources such as timing information, power consumption, electromagnetic emissions, or even sound.
@@ -31,6 +41,7 @@ Such attacks can be highly effective in compromising cryptographic systems like 
 
 This paper will perform a power analysis attack on a well-known vulnerability in an implementation of the RSA algorithm in a firmware for  Arduino ( Atmega328P).
 
+> Note I did it on the rush, please forgive me for the spell errors that eventually you will find.
 
 ### Power Analysis Attacks
 
