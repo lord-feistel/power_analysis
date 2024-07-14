@@ -160,9 +160,9 @@ resistors `R1` and `R2`.
 The voltage divider is a consequence of Kirchhoff's Voltage Law (KVL) and states a way to calculates the **Vout** that is the voltage between
 the resistor `R1`and `R2`. 
 
-The formula of the voltage divisor  is presented in the **Figure 8**. 
+The formula of the voltage divider  is presented in the **Figure 8**. 
 
-An example of voltage divisor application is presented in the **Figure 9**.
+An example of voltage divider application is presented in the **Figure 9**.
 
 ![voltage_divisor](https://github.com/lord-feistel/power_analysis/blob/main/images/voltage_divisor.jpg) 
 
@@ -172,7 +172,7 @@ An example of voltage divisor application is presented in the **Figure 9**.
 
 **Figure 9** - Voltage divider example. 
 
-### Shunt
+### Shunt Resistor
 
 A shunt resistor is a low-value resistor placed in series with the circuit's power supply to measure the current flowing through the circuit.
 
@@ -200,7 +200,7 @@ The way it wil be connected is presented in the  **Figure 10**.
 **Figure 11** - Circuit of the shunt in the breadboard.  
 
 
-### Example power meansure
+### Example of power measurement 
 
 To demonstrate the measurement of current consumption using a shunt resistor , a LED (Sedra & Smith, 2014) will be connected to the microcontroller's GPIO (**Figure12**) and the osciloscope will be used to observe how it affects the power consumption over the shunt resistor in the situations where the LED is on or off. 
 
